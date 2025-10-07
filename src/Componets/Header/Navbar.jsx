@@ -2,6 +2,8 @@ import React from "react";
 import Container from "../Container/Container";
 import logo from "../../../src/assets/logo.png";
 import { NavLink } from "react-router-dom";
+import "./navbar.css";
+import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
   const menu = (
@@ -58,7 +60,13 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1">{menu}</ul>
           </div>
           <div className="navbar-end">
-            <a className="btn">Button</a>
+            <a
+              href="https://github.com/tomalhossen78/B12-A08-Hero-Apps"
+              className="btn text-white bg-gradient-to-tl from-[#9F62F2] to-[#632EE3]"
+            >
+              <FaGithub />
+              Contribute
+            </a>
           </div>
         </div>
       </Container>
