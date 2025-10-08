@@ -19,7 +19,10 @@ const Banner = () => {
           into digital experiences that truly make an impact.
         </p>
         <div className="flex justify-center items-center gap-6">
-          <button className="border-[#D2D2D2] border-1 py-6 btn">
+          <a
+            href="https://play.google.com/store/"
+            className="border-[#D2D2D2] border-1 py-6 btn"
+          >
             <div className="flex justify-between items-center gap-2">
               <img
                 className="w-8"
@@ -30,8 +33,11 @@ const Banner = () => {
                 Google Play
               </h1>
             </div>
-          </button>
-          <button className="border-[#D2D2D2] border-1 py-6 btn">
+          </a>
+          <a
+            href="https://www.apple.com/app-store/"
+            className="border-[#D2D2D2] border-1 py-6 btn"
+          >
             <div className="flex justify-between items-center gap-2">
               <img
                 className="w-8"
@@ -42,7 +48,7 @@ const Banner = () => {
                 Google Play
               </h1>
             </div>
-          </button>
+          </a>
         </div>
         <div>
           <img className="mx-auto w-3xl" src={bannerImg} alt="" />

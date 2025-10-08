@@ -53,9 +53,12 @@ const Navbar = () => {
                 {menu}
               </ul>
             </div>
-            <img className="w-10" src={logo} alt="logo" />
-            <a className="btn btn-ghost text-xl font-bold text-transparent bg-clip-text bg-gradient-to-tl from-[#9F62F2] to-[#632EE3]">
-              HERO.IO
+
+            <a
+              href="/"
+              className="py-6 btn btn-ghost text-xl font-bold text-transparent bg-clip-text bg-gradient-to-tl from-[#9F62F2] to-[#632EE3]"
+            >
+              <img className="w-10" src={logo} alt="logo" /> HERO.IO
             </a>
           </div>
           <div className="navbar-center hidden lg:flex">
