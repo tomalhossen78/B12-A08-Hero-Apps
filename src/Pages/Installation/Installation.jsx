@@ -16,16 +16,6 @@ const Installation = () => {
             Explore All Trending Apps on the Market developed by us
           </p>
         </div>
-        <div className="flex justify-between items-center">
-          <p className="text-xl font-medium text-[#001931]">Apps found</p>
-          <label>
-            <select className="select" name="" id="">
-              <option value="none">Sort By Size</option>
-              <option value="none">Low-High</option>
-              <option value="none">High-Low</option>
-            </select>
-          </label>
-        </div>
         <InstalledApps data={data} />
       </div>
     </Container>
