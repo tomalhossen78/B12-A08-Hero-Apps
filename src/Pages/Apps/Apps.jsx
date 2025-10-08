@@ -66,7 +66,6 @@ const Apps = () => {
                 </g>
               </svg>
               <input
-                value={search}
                 onChange={(e) => handleSearch(e.target.value)}
                 type="search"
                 required

@@ -3,17 +3,17 @@ import downlaodImg from "../../assets/icon-downloads.png";
 import ratingsImg from "../../assets/icon-ratings.png";
 import reviewImg from "../../assets/icon-review.png";
 import Container from "../../Componets/Container/Container";
-import { useLocation } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { addToLs, getDataToLs } from "../../Utility/addToLS";
 const AppDetails = () => {
+  const app = useLoaderData();
   const [install, setInstall] = useState(false);
-  const app = useLocation().state;
   useEffect(() => {
     const storedId = getDataToLs();
     const alreadyInstall = storedId.includes(app.id);
     // console.log(alreadyInstall);
     setInstall(alreadyInstall);
-  }, []);
+  }, [app.id]);
 
   const {
     companyName,
