@@ -8,13 +8,13 @@ import { FaGithub } from "react-icons/fa";
 const Navbar = () => {
   const menu = (
     <>
-      <NavLink to="/" className="mr-10">
+      <NavLink to="/" className="mr-6">
         Home
       </NavLink>
-      <NavLink to="/apps" className="mr-10">
+      <NavLink to="/apps" className="mr-6">
         Apps
       </NavLink>
-      <NavLink to="/installation" className="mr-10">
+      <NavLink to="/installation" className="mr-6">
         Installation
       </NavLink>
     </>
@@ -54,7 +54,9 @@ const Navbar = () => {
               </ul>
             </div>
             <img className="w-10" src={logo} alt="logo" />
-            <a className="btn btn-ghost text-xl">HERO.IO</a>
+            <a className="btn btn-ghost text-xl font-bold text-transparent bg-clip-text bg-gradient-to-tl from-[#9F62F2] to-[#632EE3]">
+              HERO.IO
+            </a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{menu}</ul>
