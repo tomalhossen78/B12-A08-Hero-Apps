@@ -4,6 +4,7 @@ import ratingsImg from "../../assets/icon-ratings.png";
 import reviewImg from "../../assets/icon-review.png";
 import Container from "../../Componets/Container/Container";
 import { useLocation } from "react-router-dom";
+import { addToLs } from "../../Utility/addToLS";
 const AppDetails = () => {
   const app = useLocation().state;
   const {
@@ -52,7 +53,10 @@ const AppDetails = () => {
             </div>
           </div>
           <div className="text-left">
-            <button className="btn bg-[#00D390] text-white">
+            <button
+              onClick={() => addToLs(id)}
+              className="btn bg-[#00D390] text-white"
+            >
               Install Now ({size}MB)
             </button>
           </div>
