@@ -1,8 +1,10 @@
 import React from "react";
 import Container from "../../Componets/Container/Container";
 import InstalledApps from "../../Componets/InstalledApps/InstalledApps";
+import { useLoaderData } from "react-router-dom";
 
 const Installation = () => {
+  const data = useLoaderData();
   return (
     <Container>
       <div className="text-center space-y-4 my-16">
@@ -24,7 +26,7 @@ const Installation = () => {
             </select>
           </label>
         </div>
-        <InstalledApps />
+        <InstalledApps data={data} />
       </div>
     </Container>
   );

@@ -1,26 +1,24 @@
 import React from "react";
 import downlaodImg from "../../assets/icon-downloads.png";
 import ratingsImg from "../../assets/icon-ratings.png";
-import appImg from "../../assets/demo-app (1).webp";
-const CartItem = () => {
+const CartItem = ({ app }) => {
+  const { downloads, image, id, ratingAvg, size, title } = app;
   return (
     <div className="flex justify-between items-center bg-white p-4">
       <div className="flex items-center justify-between gap-6">
-        <img className="w-[80px] rounded-lg" src={appImg} alt="" />
-        <div className="space-y-2">
-          <h3 className="text-xl font-medium text-[#001931]">
-            Forest: Focus for Productivity
-          </h3>
+        <img className="w-[80px] rounded-lg" src={image} alt="" />
+        <div className="space-y-2 text-left">
+          <h3 className="text-xl font-medium text-[#001931]">{title}</h3>
           <div className="flex justify-start gap-2 items-center">
             <div className="flex justify-center items-center gap-1">
               <img className="w-3" src={downlaodImg} alt="" />
-              <p className="text-[#00D390]">4.9M</p>
+              <p className="text-[#00D390]">{downloads / 1000000}M</p>
             </div>
             <div className="flex justify-center items-center gap-1">
               <img className="w-3" src={ratingsImg} alt="" />
-              <p className="text-[#FF8811]">5</p>
+              <p className="text-[#FF8811]">{ratingAvg}</p>
             </div>
-            <p className="text-[#627382]">300 MB</p>
+            <p className="text-[#627382]">{size}MB</p>
           </div>
         </div>
       </div>
