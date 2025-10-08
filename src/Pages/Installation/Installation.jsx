@@ -7,7 +7,7 @@ const Installation = () => {
   const data = useLoaderData();
   return (
     <Container>
-      <div className="text-center space-y-4 my-16">
+      <div className="text-center space-y-4 my-16 min-h-[60vh]">
         <div className="space-y-2">
           <h1 className="text-4xl text-[#001931] font-bold">
             Your Installed Apps
