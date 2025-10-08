@@ -6,7 +6,7 @@ const CartItem = ({ app, handleRemove }) => {
   return (
     <div className="flex justify-between items-center bg-white p-4">
       <div className="flex items-center justify-between gap-6">
-        <img className="w-[80px] rounded-lg" src={image} alt="" />
+        <img className="h-[80px] rounded-lg" src={image} alt="" />
         <div className="space-y-2 text-left">
           <h3 className="text-xl font-medium text-[#001931]">{title}</h3>
           <div className="flex justify-start gap-2 items-center">

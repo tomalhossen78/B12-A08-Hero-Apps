@@ -8,10 +8,10 @@ const SingleApp = ({ app }) => {
   return (
     <div
       onClick={() => navigate(`/apps/${id}`, { state: app })}
-      className="bg-white p-4  space-y-3 h-full text-center hover:scale-105 duration-200 ease-in shadow-md rounded-md"
+      className="bg-white p-6  space-y-3 h-full text-center hover:scale-105 duration-200 ease-in shadow-md rounded-md"
     >
       <div className="flex items-center justify-center pt-2">
-        <img className="rounded-lg" src={image} alt="" />
+        <img className="rounded-lg h-[180px]" src={image} alt="" />
       </div>
       <p className="text-[#001931] font-medium text-lg">{title}</p>
       <div className="flex justify-between gap-10">

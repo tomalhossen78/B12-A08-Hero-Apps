@@ -14,7 +14,7 @@ const AppDetails = () => {
     // console.log(alreadyInstall);
     setInstall(alreadyInstall);
   }, []);
-  //   console.log(storedId);
+
   const {
     companyName,
     description,
@@ -22,7 +22,6 @@ const AppDetails = () => {
     image,
     id,
     ratingAvg,
-    ratings,
     reviews,
     size,
     title,
@@ -35,7 +34,7 @@ const AppDetails = () => {
   return (
     <Container>
       <div className="flex items-center justify-start gap-10 my-10">
-        <img className="shadow-2xl" src={image} />
+        <img className="shadow-2xl w-[300px] rounded-xl" src={image} />
         <div>
           <div className="border-b-2 border-gray-300 pb-4">
             <h3 className="text-[#001931] text-2xl font-bold">{title}</h3>
