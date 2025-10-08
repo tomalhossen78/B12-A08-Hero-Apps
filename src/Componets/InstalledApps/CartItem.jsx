@@ -1,7 +1,7 @@
 import React from "react";
 import downlaodImg from "../../assets/icon-downloads.png";
 import ratingsImg from "../../assets/icon-ratings.png";
-const CartItem = ({ app }) => {
+const CartItem = ({ app, handleRemove }) => {
   const { downloads, image, id, ratingAvg, size, title } = app;
   return (
     <div className="flex justify-between items-center bg-white p-4">
@@ -22,7 +22,12 @@ const CartItem = ({ app }) => {
           </div>
         </div>
       </div>
-      <button className="btn bg-[#00D390] text-white">Uninstall</button>
+      <button
+        onClick={() => handleRemove(id)}
+        className="btn bg-[#00D390] text-white"
+      >
+        Uninstall
+      </button>
     </div>
   );
 };

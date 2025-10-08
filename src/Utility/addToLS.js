@@ -19,3 +19,10 @@ export const addToLs = (id) => {
         localStorage.setItem('istalled',data);
     }
 }
+
+export const removeToLS = (id) =>{
+    const storedData = getDataToLs();
+    const updatedData = storedData.filter(itemId => itemId !== id );
+    const data = JSON.stringify(updatedData);
+    localStorage.setItem('istalled',data)
+}

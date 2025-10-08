@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getDataToLs } from "../../Utility/addToLS";
+import { getDataToLs, removeToLS } from "../../Utility/addToLS";
 import CartItem from "./CartItem";
 const InstalledApps = ({ data }) => {
   const [cart, setCart] = useState([]);
@@ -7,7 +7,6 @@ const InstalledApps = ({ data }) => {
   useEffect(() => {
     const storedID = getDataToLs();
     const filterData = data.filter((d) => storedID.includes(d.id));
-    // console.log(filterData);
     setCart(filterData);
   }, []);
 
@@ -19,6 +18,11 @@ const InstalledApps = ({ data }) => {
       const SortedList = [...cart].sort((a, b) => b.size - a.size);
       setCart(SortedList);
     }
+  };
+  const handleRemove = (id) => {
+    removeToLS(id);
+    const upadateCart = [...cart].filter((item) => item.id !== id);
+    setCart(upadateCart);
   };
   return (
     <div className="space-y-4">
@@ -39,7 +43,7 @@ const InstalledApps = ({ data }) => {
       </div>
       <div className="space-y-4">
         {cart.map((app) => (
-          <CartItem key={app.id} app={app} />
+          <CartItem key={app.id} handleRemove={handleRemove} app={app} />
         ))}
       </div>
     </div>
