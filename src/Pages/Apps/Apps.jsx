@@ -17,7 +17,7 @@ const Apps = () => {
           </p>
         </div>
         <div className="flex justify-between items-center">
-          <p>Apps found</p>
+          <p className="text-xl font-medium text-[#001931]">Apps found</p>
           <label className="input">
             <svg
               className="h-[1em] opacity-50"
@@ -38,7 +38,7 @@ const Apps = () => {
             <input type="search" required placeholder="Search" />
           </label>
         </div>
-        <div className="grid grid-cols-4 gap-4  justify-around">
+        <div className="grid grid-cols-4 gap-6 justify-around">
           {data.map((app) => (
             <SingleApp key={app.id} app={app} />
           ))}
