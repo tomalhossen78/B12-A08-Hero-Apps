@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import downlaodImg from "../../assets/icon-downloads.png";
 import ratingsImg from "../../assets/icon-ratings.png";
 import reviewImg from "../../assets/icon-review.png";
 import Container from "../../Componets/Container/Container";
 import { useLocation } from "react-router-dom";
-import { addToLs } from "../../Utility/addToLS";
+import { addToLs, getDataToLs } from "../../Utility/addToLS";
 const AppDetails = () => {
+  const [install, setInstall] = useState(false);
   const app = useLocation().state;
+  useEffect(() => {
+    const storedId = getDataToLs();
+    const alreadyInstall = storedId.includes(app.id);
+    // console.log(alreadyInstall);
+    setInstall(alreadyInstall);
+  }, []);
+  //   console.log(storedId);
   const {
     companyName,
     description,
@@ -19,6 +27,11 @@ const AppDetails = () => {
     size,
     title,
   } = app;
+  const handleClickInstall = (id) => {
+    // const alreadyInstall = storedId.includes(app.id);
+    setInstall(true);
+    addToLs(id);
+  };
   return (
     <Container>
       <div className="flex items-center justify-start gap-10 my-10">
@@ -54,10 +67,11 @@ const AppDetails = () => {
           </div>
           <div className="text-left">
             <button
-              onClick={() => addToLs(id)}
+              disabled={install}
+              onClick={() => handleClickInstall(id)}
               className="btn bg-[#00D390] text-white"
             >
-              Install Now ({size}MB)
+              {install ? "Installed" : `Install Now(${size}MB)`}
             </button>
           </div>
         </div>
