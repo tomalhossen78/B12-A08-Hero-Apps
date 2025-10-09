@@ -54,10 +54,10 @@ const Banner = () => {
           <img className="mx-auto w-3xl" src={bannerImg} alt="" />
           <div className="bg-gradient-to-tl from-[#9F62F2] to-[#632EE3] text-white py-12">
             <Container>
-              <h1 className="text-4xl font-bold text-center mb-10">
+              <h1 className="md:text-4xl text-2xl font-bold text-center mb-10">
                 Trusted by Millions, Built for You
               </h1>
-              <div className="flex justify-around items-center">
+              <div className="md:flex justify-around items-center space-y-10">
                 <div className="space-y-2 text-center">
                   <p>Total Downloads</p>
                   <h1 className="text-7xl font-extrabold">29.6M</h1>

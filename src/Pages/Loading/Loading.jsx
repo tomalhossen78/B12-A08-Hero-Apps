@@ -6,7 +6,7 @@ const Loading = () => {
     <div>
       <Container>
         <div className="flex justify-center items-center h-screen">
-          <h1 className="text-6xl font-medium text-[#627382] animate-pulse">
+          <h1 className="text-6xl font-medium text-[#627382] animate-bounce">
             L{" "}
           </h1>
           <img className="w-30 p-4 animate-spin" src={logo} alt="" />

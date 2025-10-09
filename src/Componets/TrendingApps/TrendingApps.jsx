@@ -15,7 +15,7 @@ const TrendingApps = ({ data }) => {
         <p className="text-[#627382] text-lg text-center">
           Explore All Trending Apps on the Market developed by us
         </p>
-        <div className="grid grid-cols-4 gap-4  justify-around">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4  justify-around">
           {sliceData.map((app) => (
             <SingleApp key={app.id} app={app} />
           ))}

@@ -20,7 +20,7 @@ a.active::after {
   left: 0;
   bottom: -2px; /* adjust as needed */
   width: 100%;
-  height: 2px;
+  height: 4px;
   background: linear-gradient(125.07deg, rgba(99, 46, 227, 1), rgba(159, 98, 242, 1) 100%);
   border-radius: 2px;
 }

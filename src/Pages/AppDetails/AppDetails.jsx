@@ -6,16 +6,6 @@ import Container from "../../Componets/Container/Container";
 import { useLoaderData } from "react-router-dom";
 import { addToLs, getDataToLs } from "../../Utility/addToLS";
 import { ToastContainer, toast } from "react-toastify";
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Legend,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
 import RatingBarChart from "../../Componets/RatingBarChart/RatingBarChart";
 const AppDetails = () => {
   const app = useLoaderData();
@@ -41,15 +31,17 @@ const AppDetails = () => {
   } = app;
   const handleClickInstall = (id) => {
     // const alreadyInstall = storedId.includes(app.id);
-    toast.success(`${app.title} is installed Succesfully!`);
+    toast.success(`${app.title} is installed Succesfully!`, {
+      autoClose: 2000,
+    });
     setInstall(true);
     addToLs(id);
   };
   const barChartData = [...ratings].reverse();
   return (
     <Container>
-      <div className="flex items-center justify-start gap-10 my-10">
-        <img className="shadow-2xl w-[300px] rounded-xl" src={image} />
+      <div className="md:flex items-center justify-start gap-10 my-10 mx-8 space-y-10">
+        <img className="shadow-xl w-[300px] rounded-xl" src={image} />
         <div>
           <div className="border-b-2 border-gray-300 pb-4">
             <h3 className="text-[#001931] text-2xl font-bold">{title}</h3>
@@ -60,18 +52,18 @@ const AppDetails = () => {
               </span>
             </p>
           </div>
-          <div className="flex justify-start gap-10 items-center py-6">
-            <div className="flex flex-col justify-center items-start gap-1">
+          <div className="flex justify-start gap-4 md:gap-10 items-center py-6">
+            <div className="flex flex-col justify-center items-center gap-1">
               <img className="w-8" src={downlaodImg} alt="" />
               <h3>Downlaods</h3>
               <p className="text-3xl font-extrabold">{downloads / 1000000}M</p>
             </div>
-            <div className="flex flex-col justify-center items-start gap-1">
+            <div className="flex flex-col justify-center items-center gap-1">
               <img className="w-8" src={ratingsImg} alt="" />
               <h3>Average Ratings</h3>
-              <p className=" text-3xl font-extrabold">{ratingAvg.toFixed(2)}</p>
+              <p className=" text-3xl font-extrabold">{ratingAvg}</p>
             </div>
-            <div className="flex flex-col justify-center items-start gap-1">
+            <div className="flex flex-col justify-center items-center gap-1">
               <img className="w-8" src={reviewImg} alt="" />
               <h3>Total Reviews</h3>
               <p className="text-3xl font-extrabold">
@@ -90,11 +82,13 @@ const AppDetails = () => {
           </div>
         </div>
       </div>
-      <div className="text-left border-t-2 border-gray-300 py-6 mb-10">
+      <div className="text-left border-t-2 border-gray-300 py-6 mb-10 px-6 md:px-0">
         <h2 className="font-semibold text-2xl pb-4">Description</h2>
         <p className="text-[#627382]">{description}</p>
       </div>
-      <RatingBarChart barChartData={barChartData} />
+      <div className="px-6 md:px-0">
+        <RatingBarChart barChartData={barChartData} />
+      </div>
       <ToastContainer />
     </Container>
   );

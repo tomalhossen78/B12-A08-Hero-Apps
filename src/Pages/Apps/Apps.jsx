@@ -34,21 +34,21 @@ const Apps = () => {
   return (
     <div>
       <Container>
-        <div className="text-center space-y-4 my-16">
+        <div className="text-center space-y-4 my-16  px-8">
           <div className="space-y-2">
-            <h1 className="text-4xl text-[#001931] font-bold">
+            <h1 className="md:text-4xl text-3xl text-[#001931] font-bold">
               Our All Applications
             </h1>
-            <p className="text-xl text-[#627382]">
+            <p className="md:text-xl text-[#627382]">
               Explore All Apps on the Market developed by us. We code for
               Millions
             </p>
           </div>
           <div className="flex justify-between items-center">
-            <p className="text-xl font-medium text-[#001931]">
+            <p className="md:text-xl font-medium text-[#001931]">
               {searchedData.length} Apps found
             </p>
-            <label className="input">
+            <label className="input md:w-60 w-40">
               <svg
                 className="h-[1em] opacity-50"
                 xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ const Apps = () => {
           ) : (
             <>
               {searchedData.length === 0 && conditionalData}
-              <div className="grid grid-cols-4 gap-6 justify-around">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-around">
                 {searchedData.map((app) => (
                   <SingleApp key={app.id} app={app} />
                 ))}

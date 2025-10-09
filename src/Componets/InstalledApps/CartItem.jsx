@@ -4,10 +4,10 @@ import ratingsImg from "../../assets/icon-ratings.png";
 const CartItem = ({ app, handleRemove }) => {
   const { downloads, image, id, ratingAvg, size, title } = app;
   return (
-    <div className="flex justify-between items-center bg-white p-4">
-      <div className="flex items-center justify-between gap-6">
-        <img className="h-[80px] rounded-lg" src={image} alt="" />
-        <div className="space-y-2 text-left">
+    <div className="flex justify-between items-center bg-white py-2 px-4">
+      <div className="flex items-center justify-between gap-2 md:gap-6">
+        <img className="md:h-[60px] h-[50px] rounded-lg" src={image} alt="" />
+        <div className="space-y-1 text-left">
           <h3 className="text-xl font-medium text-[#001931]">{title}</h3>
           <div className="flex justify-start gap-2 items-center">
             <div className="flex justify-center items-center gap-1">
