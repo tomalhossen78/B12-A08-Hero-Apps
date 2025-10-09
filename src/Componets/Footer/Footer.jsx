@@ -3,15 +3,22 @@ import { FaSquareXTwitter, FaLinkedin } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import Container from "../Container/Container";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
-    <div className="bg-black text-white mt-12">
+    <div className="bg-black text-white mt-8">
       <Container>
-        <div className=" py-16 ">
+        <div className=" py-8">
           <div className="grid grid-cols-1 md:grid-cols-6 justify-between py-16 gap-10 text-sm">
             <div className="col-span-2">
-              <h1 className="text-xl font-medium pb-6">Hero-io</h1>
+              <h1
+                onClick={() => navigate("/")}
+                className="text-xl font-medium pb-6 cursor-pointer"
+              >
+                Hero-io
+              </h1>
               <p className="text-[#A1A1AA]">
                 At HERO.IO, we craft innovative apps designed to make everyday
                 life simpler, smarter, and more exciting.Our goal is to turn

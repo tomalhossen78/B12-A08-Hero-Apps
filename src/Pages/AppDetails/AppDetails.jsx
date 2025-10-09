@@ -5,6 +5,18 @@ import reviewImg from "../../assets/icon-review.png";
 import Container from "../../Componets/Container/Container";
 import { useLoaderData } from "react-router-dom";
 import { addToLs, getDataToLs } from "../../Utility/addToLS";
+import { ToastContainer, toast } from "react-toastify";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
+import RatingBarChart from "../../Componets/RatingBarChart/RatingBarChart";
 const AppDetails = () => {
   const app = useLoaderData();
   const [install, setInstall] = useState(false);
@@ -25,12 +37,15 @@ const AppDetails = () => {
     reviews,
     size,
     title,
+    ratings,
   } = app;
   const handleClickInstall = (id) => {
     // const alreadyInstall = storedId.includes(app.id);
+    toast.success(`${app.title} is installed Succesfully!`);
     setInstall(true);
     addToLs(id);
   };
+  const barChartData = [...ratings].reverse();
   return (
     <Container>
       <div className="flex items-center justify-start gap-10 my-10">
@@ -79,6 +94,8 @@ const AppDetails = () => {
         <h2 className="font-semibold text-2xl pb-4">Description</h2>
         <p className="text-[#627382]">{description}</p>
       </div>
+      <RatingBarChart barChartData={barChartData} />
+      <ToastContainer />
     </Container>
   );
 };
