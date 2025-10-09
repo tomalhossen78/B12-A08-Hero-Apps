@@ -39,7 +39,7 @@ const InstalledApps = ({ data }) => {
   return (
     <div className="space-y-4 px-4">
       <div className="flex justify-between items-center">
-        <p className="text-xl font-medium text-[#001931]">
+        <p className="text-xl font-medium dark:text-white text-[#001931]">
           {cart.length} Apps found
         </p>
         <label>

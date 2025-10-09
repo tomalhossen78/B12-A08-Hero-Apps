@@ -9,10 +9,10 @@ const TrendingApps = ({ data }) => {
   return (
     <Container>
       <div className="space-y-4 my-10">
-        <h1 className="text-[#001931] text-center font-bold text-4xl">
+        <h1 className="text-[#001931] dark:text-white text-center font-bold text-4xl">
           Trending Apps
         </h1>
-        <p className="text-[#627382] text-lg text-center">
+        <p className="text-[#627382] dark:text-gray-400 text-lg text-center mb-8">
           Explore All Trending Apps on the Market developed by us
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4  justify-around">

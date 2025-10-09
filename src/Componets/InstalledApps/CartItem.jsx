@@ -4,11 +4,13 @@ import ratingsImg from "../../assets/icon-ratings.png";
 const CartItem = ({ app, handleRemove }) => {
   const { downloads, image, id, ratingAvg, size, title } = app;
   return (
-    <div className="flex justify-between items-center bg-white py-2 px-4">
+    <div className="flex justify-between items-center bg-white dark:bg-[#632EE360] py-2 px-4 rounded-md">
       <div className="flex items-center justify-between gap-2 md:gap-6">
         <img className="md:h-[60px] h-[50px] rounded-lg" src={image} alt="" />
         <div className="space-y-1 text-left">
-          <h3 className="text-xl font-medium text-[#001931]">{title}</h3>
+          <h3 className="text-xl font-medium text-[#001931] dark:text-white">
+            {title}
+          </h3>
           <div className="flex justify-start gap-2 items-center">
             <div className="flex justify-center items-center gap-1">
               <img className="w-3" src={downlaodImg} alt="" />
@@ -18,7 +20,7 @@ const CartItem = ({ app, handleRemove }) => {
               <img className="w-3" src={ratingsImg} alt="" />
               <p className="text-[#FF8811]">{ratingAvg}</p>
             </div>
-            <p className="text-[#627382]">{size}MB</p>
+            <p className="text-[#627382] dark:text-white">{size}MB</p>
           </div>
         </div>
       </div>

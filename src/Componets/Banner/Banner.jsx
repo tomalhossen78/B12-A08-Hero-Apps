@@ -13,7 +13,7 @@ const Banner = () => {
           </span>{" "}
           Apps
         </h1>
-        <p className="text-xl/8 text-center max-w-4xl mx-auto text-[#627382]">
+        <p className="text-xl/8 text-center max-w-4xl mx-auto text-[#627382] dark:text-gray-300">
           At HERO.IO, we craft innovative apps designed to make everyday life
           simpler, smarter, and more exciting.Our goal is to turn your ideas
           into digital experiences that truly make an impact.
@@ -29,7 +29,7 @@ const Banner = () => {
                 src="https://cdn-icons-png.flaticon.com/512/300/300218.png"
                 alt=""
               />
-              <h1 className="text-[#001931] font-semibold text-xl">
+              <h1 className="text-[#001931]  font-semibold text-xl dark:text-white">
                 Google Play
               </h1>
             </div>
@@ -44,7 +44,7 @@ const Banner = () => {
                 src="https://e7.pngegg.com/pngimages/566/36/png-clipart-app-store-iphone-apple-app-store-icon-blue-text-thumbnail.png"
                 alt=""
               />
-              <h1 className="text-[#001931] font-semibold text-xl">
+              <h1 className="text-[#001931] font-semibold text-xl dark:text-white">
                 Google Play
               </h1>
             </div>

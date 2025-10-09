@@ -8,7 +8,7 @@ import Loading from "../Loading/Loading";
 const Root = () => {
   const navigation = useNavigation();
   return (
-    <div className="inter bg-[#D9D9D950] flex flex-col min-h-screen">
+    <div className="inter bg-[#D9D9D950] dark:bg-black flex flex-col min-h-screen">
       <ScrollToTop />
       {navigation.state === "loading" && <Loading />}
       <Navbar />

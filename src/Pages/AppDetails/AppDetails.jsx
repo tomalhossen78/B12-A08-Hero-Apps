@@ -13,7 +13,6 @@ const AppDetails = () => {
   useEffect(() => {
     const storedId = getDataToLs();
     const alreadyInstall = storedId.includes(app.id);
-    // console.log(alreadyInstall);
     setInstall(alreadyInstall);
   }, [app.id]);
 
@@ -30,7 +29,6 @@ const AppDetails = () => {
     ratings,
   } = app;
   const handleClickInstall = (id) => {
-    // const alreadyInstall = storedId.includes(app.id);
     toast.success(`${app.title} is installed Succesfully!`, {
       autoClose: 2000,
     });
@@ -41,11 +39,16 @@ const AppDetails = () => {
   return (
     <Container>
       <div className="md:flex items-center justify-start gap-10 my-10 mx-8 space-y-10">
-        <img className="shadow-xl w-[300px] rounded-xl" src={image} />
+        <img
+          className="shadow-xl w-[300px] rounded-xl dark:bg-white p-4"
+          src={image}
+        />
         <div>
           <div className="border-b-2 border-gray-300 pb-4">
-            <h3 className="text-[#001931] text-2xl font-bold">{title}</h3>
-            <p className="text-[#627382] text-left">
+            <h3 className="text-[#001931] dark:text-white md:text-3xl text-2xl font-bold">
+              {title}
+            </h3>
+            <p className="text-[#627382] dark:text-white text-left">
               Developed by :{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-tl from-[#9F62F2] to-[#632EE3]">
                 {companyName}
@@ -84,7 +87,7 @@ const AppDetails = () => {
       </div>
       <div className="text-left border-t-2 border-gray-300 py-6 mb-10 px-6 md:px-0">
         <h2 className="font-semibold text-2xl pb-4">Description</h2>
-        <p className="text-[#627382]">{description}</p>
+        <p className="text-[#627382] dark:text-white">{description}</p>
       </div>
       <div className="px-6 md:px-0">
         <RatingBarChart barChartData={barChartData} />

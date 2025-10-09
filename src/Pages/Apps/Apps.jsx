@@ -36,10 +36,10 @@ const Apps = () => {
       <Container>
         <div className="text-center space-y-4 my-16  px-8">
           <div className="space-y-2">
-            <h1 className="md:text-4xl text-3xl text-[#001931] font-bold">
+            <h1 className="md:text-4xl text-3xl text-[#001931] dark:text-white font-bold">
               Our All Applications
             </h1>
-            <p className="md:text-xl text-[#627382]">
+            <p className="md:text-xl text-[#627382] dark:text-gray-300">
               Explore All Apps on the Market developed by us. We code for
               Millions
             </p>
