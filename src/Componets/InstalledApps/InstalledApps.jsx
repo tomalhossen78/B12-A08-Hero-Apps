@@ -4,7 +4,6 @@ import { Slide, ToastContainer, toast } from "react-toastify";
 import CartItem from "./CartItem";
 const InstalledApps = ({ data }) => {
   const [cart, setCart] = useState([]);
-  //   const [sort, setSort] = useState("");
   useEffect(() => {
     const storedID = getDataToLs();
     const filterData = data.filter((d) => storedID.includes(d.id));

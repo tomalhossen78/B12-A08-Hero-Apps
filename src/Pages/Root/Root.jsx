@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, useNavigate, useNavigation } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 import Navbar from "../../Componets/Header/Navbar";
 import Footer from "../../Componets/Footer/Footer";
 import ScrollToTop from "../../Componets/ScrollToTop/ScrollToTop";
