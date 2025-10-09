@@ -40,7 +40,7 @@ const AppDetails = () => {
     <Container>
       <div className="md:flex items-center justify-start gap-10 my-10 mx-8 space-y-10">
         <img
-          className="shadow-xl w-[300px] rounded-xl dark:bg-white p-4"
+          className="shadow-xl w-[300px] rounded-xl dark:bg-white md:p-0 p-4"
           src={image}
         />
         <div>
