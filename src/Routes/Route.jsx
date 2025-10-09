@@ -7,6 +7,7 @@ import Installation from "../Pages/Installation/Installation";
 import Apps from "../Pages/Apps/Apps";
 import AppDetails from "../Pages/AppDetails/AppDetails";
 import Loading from "../Pages/Loading/Loading";
+import AppNotFoundError from "../Componets/AppNotFoundError/AppNotFoundError";
 
 export const router = createBrowserRouter([
   {
@@ -29,14 +30,26 @@ export const router = createBrowserRouter([
         path: "apps/:id",
         loader: async ({ params }) => {
           const data = await fetch("/AppData.json").then((res) => res.json());
-          return data.find((item) => item.id === parseInt(params.id));
+          const app = data.find((item) => item.id === parseInt(params.id));
+          if (!app) {
+            throw new Response("App Not Found in Data Set", {
+              status: 404,
+              statusText: "Not Found",
+            });
+          }
+          return app;
         },
         Component: AppDetails,
+        errorElement: <AppNotFoundError />,
       },
       {
         path: "installation",
         loader: () => fetch("/AppData.json"),
         Component: Installation,
+      },
+      {
+        path: "*",
+        Component: ErrorPage,
       },
     ],
   },

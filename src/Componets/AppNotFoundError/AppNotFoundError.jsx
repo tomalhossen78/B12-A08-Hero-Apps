@@ -1,20 +1,20 @@
 import React from "react";
-import Container from "../../Componets/Container/Container";
-import errorImg from "../../assets/error-404.png";
+import errorImg from "../../assets/App-Error.png";
 import { useNavigate } from "react-router-dom";
-
-const ErrorPage = () => {
+import Container from "../Container/Container";
+const AppNotFoundError = () => {
   const navigate = useNavigate();
   return (
     <div className="">
       <Container>
         <div className="flex flex-col justify-center items-center space-y-4 my-4">
           <img className="p-6" src={errorImg} alt="" />
-          <h1 className="text-4xl text-[#001931] font-bold">
-            Oops, page not found!
+          <h1 className="text-4xl text-[#001931] font-semibold">
+            OPPS!! APP NOT FOUND
           </h1>
           <p className="text-[#627382]">
-            The page you are looking for is not available.
+            The App you are requesting is not found on our system. please try
+            another apps
           </p>
           <button
             onClick={() => navigate(-1)}
@@ -28,4 +28,4 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+export default AppNotFoundError;
