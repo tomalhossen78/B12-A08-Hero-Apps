@@ -45,7 +45,7 @@ const Apps = () => {
             </p>
           </div>
           <div className="flex justify-between items-center">
-            <p className="md:text-xl font-medium text-[#001931]">
+            <p className="md:text-xl font-medium text-[#001931] dark:text-white">
               {searchedData.length} Apps found
             </p>
             <label className="input md:w-60 w-40">
